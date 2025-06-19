@@ -5,44 +5,187 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!--todo: 메타태그 작성하기-->
         <title>HODU 블로그</title>
+        <link
+            href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+            rel="stylesheet"
+            type="text/css"
+        />
         <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/common.css" />
         <link rel="stylesheet" href="./css/style.css" />
 
         <!--todo: 완료 후 스타일 css 파일로 빼기-->
-        <style></style>
+        <style>
+            .footer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .subscribe {
+                width: 100%;
+                height: 240px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 330px;
+
+                background:
+                    linear-gradient(rgba(242, 233, 216, 0.6)),
+                    url("./assets/images/img_5.jpg") no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+            .subscribe-form {
+                width: 326px;
+                background-color: #263140;
+                border-radius: 18px;
+                color: #fff;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 36px 32px 30px;
+                position: absolute;
+                top: -280px;
+            }
+            .subscribe-form .form-box h2 {
+                width: 194px;
+                height: 60px;
+                font-weight: 700;
+                font-size: 24px;
+                line-height: calc(24px + ((60px - (24px * 2)) / (2 * 2)));
+            }
+            .subscribe-form p {
+                font-weight: 400;
+                font-size: 14px;
+                margin-top: 20px;
+                line-height: calc(14px + ((72px - (14px * 4)) / (4 * 2)));
+            }
+            .subscribe-form input {
+                width: 262px;
+                height: 40px;
+                border-radius: 60px;
+                padding-left: 48px;
+                margin-top: 30px;
+                border: none;
+            }
+            .subscribe-form .email-box::before {
+                content: "";
+                width: 21px;
+                height: 21px;
+                position: absolute;
+                transform: translate(16px, 37px);
+                background-image: url("./assets/images/mail.svg");
+                background-repeat: no-repeat;
+                background-size: 21px 21px;
+            }
+            .subscribe-form button {
+                background-color: #d97652;
+                color: #fff;
+                width: 117px;
+                height: 40px;
+                border-radius: 40px;
+                margin-top: 20px;
+                margin-left: 145px;
+            }
+
+            .footer-info {
+                width: 390px;
+                height: 178px;
+                display: flex;
+                justify-content: space-between;
+                padding: 30px 20px 24px 20px;
+            }
+            .footer-info .logo-sns {
+                display: flex;
+                flex-direction: column;
+                gap: 58px;
+            }
+            .footer-info .logo-sns .logo {
+                width: 112px;
+                height: 34px;
+            }
+            .footer-info .logo-sns ul {
+                display: flex;
+                gap: 16px;
+            }
+            .footer-info .logo-sns ul li a {
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                background-color: #f29d52;
+                border-radius: 50%;
+                position: relative;
+            }
+            .footer-info .logo-sns ul li a img {
+                width: 18.29px;
+                height: 18.29px;
+                position: relative;
+                left: 6.86px;
+                top: 6.86px;
+            }
+            .footer-info .footer-menu {
+                display: flex;
+                flex-direction: column;
+                text-align: right;
+                color: #767676;
+            }
+            .footer-info .footer-menu ul {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                font-size: 14px;
+                line-height: 18px;
+            }
+        </style>
     </head>
     <body>
         <header class="header">
-            <h1>
-                <img class="logo" src="./assets/images/logo.png" alt="" />
-            </h1>
-            <nav class="menu">
-                <button aria-label="메뉴 열기"></button>
-                <div class="menu-box">
-                    <button aria-label="메뉴 닫기"></button>
-                    <div class="menu-content">
-                        <ul>
-                            <li>Home</li>
-                            <li>About</li>
-                            <li>Support</li>
-                        </ul>
-                        <a href="#">Download</a>
+            <div class="header-box">
+                <h1>
+                    <img
+                        class="logo"
+                        src="./assets/images/logo.png"
+                        alt="호두 블로그 로고"
+                    />
+                </h1>
+                <nav class="menu">
+                    <button class="menu-open" aria-label="메뉴 열기"></button>
+                    <div class="menu-box">
+                        <button
+                            class="menu-close"
+                            aria-label="메뉴 닫기"
+                        ></button>
+                        <div class="menu-content">
+                            <ul>
+                                <li>Home</li>
+                                <li>About</li>
+                                <li>Support</li>
+                            </ul>
+                            <a href="#">Download</a>
+                        </div>
                     </div>
-                </div>
-            </nav>
-            <section class="header-box">
-                <h2>Lorem Ipsum is simply dummy text of the printing and</h2>
+                </nav>
+            </div>
+            <section class="header-content-box">
+                <h2>
+                    Lorem Ipsum is simply dummy text <br />
+                    of the printing and
+                </h2>
                 <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
+                    Lorem Ipsum is simply dummy text <br />
+                    of the printing and typesetting industry. <br />
+                    Lorem Ipsum has been the industry's <br />
                     standard dummy text ever since the 1500s, when an unknown
                 </p>
-                <a href="#">Download</a>
+                <a class="download-btn" href="#">Download</a>
             </section>
         </header>
         <main class="main">
             <section class="intro">
-                <img src="./assets/images/img_4.jpg" alt="누워있는 호두" />
+                <div class="intro-img">
+                    <img src="./assets/images/img_4.jpg" alt="누워있는 호두" />
+                </div>
+
                 <div class="intro-container">
                     <h2>
                         Lorem Ipsum is simply dummy text of the printing and
@@ -56,12 +199,15 @@
             </section>
 
             <section class="photo-album">
-                <h2>dummy text of the printing and dummy</h2>
-                <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                </p>
+                <div>
+                    <h2>dummy text of the printing and dummy</h2>
+                    <p>
+                        Lorem Ipsum is simply <span>dummy text</span> of the
+                        printing and typesetting industry. <br />
+                        Lorem Ipsum has been the industry's standard dummy text
+                        ever since the 1500s, when an unknown
+                    </p>
+                </div>
                 <ul>
                     <li>
                         <img
@@ -87,8 +233,9 @@
             <section class="bottom">
                 <p>
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
+                    typesetting industry. <br />
+                    Lorem Ipsum has been the industry's standard dummy text ever
+                    since the 1500s, when an unknown <br />
                     Ipsum is simply dummy text of the printing and typesetting
                     industry.
                 </p>
@@ -102,25 +249,27 @@
                     <div class="form-box">
                         <h2>Subscribe to our Blog post</h2>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and
-                            typesetting industry. Lorem Ipsum has been the
-                            industry's standard dummy text
+                            Lorem Ipsum is simply dummy text of <br />
+                            the printing and typesetting industry. <br />
+                            Lorem Ipsum has been the industry's standard dummy
+                            text
                         </p>
                     </div>
                     <fieldset>
                         <legend class="sr-only">이메일 정보</legend>
-                        <label for="email" class="sr-only">이메일</label>
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Enter your e-mail address"
-                        />
+                        <div class="email-box">
+                            <label for="email" class="sr-only">이메일</label>
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your e-mail address"
+                            />
+                        </div>
 
                         <button type="submit">Subscribe</button>
                     </fieldset>
                 </form>
             </section>
-
             <div class="footer-info">
                 <div class="logo-sns">
                     <img class="logo" src="./assets/images/logo.png" alt="" />
@@ -156,14 +305,14 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer-menu">
+                <nav class="footer-menu">
                     <ul>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Support</a></li>
                         <li><a href="#">Terms of Use</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
         </footer>
     </body>
