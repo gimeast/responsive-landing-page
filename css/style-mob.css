@@ -2,7 +2,7 @@
     font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 768px) {
     /*header section*/
     .header {
         width: 100%;
@@ -24,9 +24,6 @@
         margin-left: 20px;
     }
     .header .menu-open {
-        /*todo: 배포시 주석*/
-        /*display: none;*/
-
         background-image: url("../assets/images/menu.svg");
         width: 32px;
         height: 32px;
@@ -76,7 +73,6 @@
         transition: 0.8s;
     }
     .header .menu-box {
-        /*todo: 배포시 주석해제*/
         display: none;
 
         width: 289px;
@@ -411,5 +407,9 @@
         background-color: #d97652;
         color: #fff;
         margin-top: 28px;
+    }
+
+    .scroll-btn {
+        display: none;
     }
 }
