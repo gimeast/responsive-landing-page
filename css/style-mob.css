@@ -114,11 +114,12 @@
         background-color: #d97652;
         border-radius: 40px;
         margin-top: 30px;
-        padding-top: 11px;
         color: #fff;
 
         font-weight: 700;
         font-size: 14px;
+        text-align: center;
+        align-content: center;
     }
 
     /*main section*/
@@ -230,7 +231,7 @@
         height: 40px;
         border-radius: 40px;
         text-align: center;
-        padding-top: 11px;
+        align-content: center;
         margin-top: 30px;
         align-self: flex-end;
         font-weight: 700;
@@ -336,8 +337,8 @@
     }
     .footer-info .logo-sns ul li a {
         display: inline-block;
-        width: clamp(5px, 10vw, 32px);
-        height: clamp(5px, 10vw, 32px);
+        width: 32px;
+        height: 32px;
         background-color: #f29d52;
         border-radius: 50%;
         position: relative;

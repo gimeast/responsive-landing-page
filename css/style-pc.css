@@ -329,6 +329,7 @@
         border-radius: 50%;
         text-align: center;
         align-content: center;
+        padding-top: 3px;
     }
     .footer-info .logo-sns ul li a img {
         width: 24px;
