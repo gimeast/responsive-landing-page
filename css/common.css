@@ -1,3 +1,7 @@
+* {
+    font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
 .sr-only {
     position: absolute;
     width: 1px;
@@ -8,4 +12,8 @@
     clip-path: inset(50%);
     border: 0;
     clip: rect(0 0 0 0);
+}
+
+.span-br {
+    display: block;
 }

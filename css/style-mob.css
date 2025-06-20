@@ -1,7 +1,3 @@
-* {
-    font-family: "Spoqa Han Sans Neo", "sans-serif";
-}
-
 @media screen and (max-width: 768px) {
     /*header section*/
     .header {
@@ -56,7 +52,7 @@
     .header .menu-box .menu-content ul li:not(:first-of-type) {
         margin-top: 30px;
     }
-    .header .menu-box .menu-content a {
+    .header .menu-box .menu-content > a {
         display: inline-block;
         width: 119px;
         height: 40px;
@@ -99,10 +95,11 @@
         text-align: center;
         line-height: calc(24px + ((90px - (24px * 3)) / (3 * 2)));
     }
+    .header .header-content-box p:first-of-type {
+        margin-top: 30px;
+    }
     .header .header-content-box p {
         width: clamp(200px, 100vw, 280px);
-        height: 98px;
-        margin-top: 30px;
         font-size: 14px;
         text-align: center;
         line-height: calc(14px + ((98px - (14px * 5)) / (5 * 2)));
@@ -169,19 +166,20 @@
     }
     .main .photo-album h2 {
         width: clamp(200px, 100vw, 326px);
-        /*width: 326px;*/
         font-weight: 700;
         font-size: 24px;
         text-align: center;
         color: #d97652;
         line-height: calc(24px + (60px - (24px * 2)) / (2 * 2));
     }
+    .main .photo-album p:first-of-type {
+        margin-top: 30px;
+    }
     .main .photo-album p {
         width: clamp(200px, 100vw, 326px);
         font-weight: 400;
         font-size: 16px;
         text-align: center;
-        margin-top: 30px;
         line-height: calc(16px + (102px - (16px * 5)) / (5 * 2));
     }
     .main .photo-album span {
@@ -275,10 +273,12 @@
         font-size: 24px;
         line-height: calc(24px + ((60px - (24px * 2)) / (2 * 2)));
     }
+    .subscribe-form p:first-of-type {
+        margin-top: 20px;
+    }
     .subscribe-form p {
         font-weight: 400;
         font-size: 14px;
-        margin-top: 20px;
         line-height: calc(14px + ((72px - (14px * 4)) / (4 * 2)));
     }
     .subscribe-form input {
@@ -289,15 +289,16 @@
         margin-top: 30px;
         border: none;
     }
-    .subscribe-form .email-box::before {
+    .subscribe-form fieldset::before {
         content: "";
         width: 21px;
         height: 21px;
-        position: absolute;
-        transform: translate(16px, 37px);
         background-image: url("../assets/images/mail.svg");
         background-repeat: no-repeat;
         background-size: 21px 21px;
+        position: absolute;
+        top: 220px;
+        left: 48px;
     }
     .subscribe-form button {
         background-color: #d97652;
@@ -382,6 +383,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-align: center;
     }
     .hodu-img {
         display: block;
