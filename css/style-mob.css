@@ -253,6 +253,7 @@
             linear-gradient(rgba(242, 233, 216, 0.6)),
             url("../assets/images/img_5.jpg") no-repeat;
         background-size: cover;
+        background-position-y: -36px;
         position: relative;
     }
     .subscribe-form {

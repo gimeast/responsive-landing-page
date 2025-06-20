@@ -45,7 +45,7 @@
         font-size: 16px;
         line-height: 20px;
     }
-    .header .header-box .menu .menu-box .menu-content a {
+    .header .header-box .menu .menu-box .menu-content > a {
         display: inline-block;
         width: 140px;
         height: 50px;
@@ -53,26 +53,31 @@
         background-color: #d97652;
         color: #fff;
         text-align: center;
-        padding: 15px 30px 15px 29px;
+        align-content: center;
 
         font-weight: 700;
         font-size: 16px;
         line-height: 20px;
     }
     .header .header-content-box h2 {
-        max-width: 737px;
+        width: clamp(500px, 50vw, 737px);
         font-weight: 700;
         font-size: 48px;
         margin-top: 200px;
         line-height: calc(48px + ((120px - (48px * 2)) / (2 * 2)));
+        word-break: keep-all;
     }
     .header .header-content-box p {
-        margin-top: 40px;
-        max-width: 439px;
-
         font-weight: 400;
         font-size: 16px;
         line-height: calc(16px + ((86px - (16px * 4)) / (4 * 2)));
+    }
+    .header .header-content-box p:first-of-type {
+        width: clamp(100px, 50vw, 439px);
+        margin-top: 40px;
+    }
+    .header .header-content-box p:last-of-type {
+        width: clamp(100px, 50vw, 430px);
     }
     .header .header-content-box .download-btn {
         display: inline-block;
@@ -82,10 +87,9 @@
         border-radius: 40px;
         background-color: #d97652;
         text-align: center;
-        padding: 15px 30px 15px 29px;
+        align-content: center;
         font-weight: 700;
         font-size: 16px;
-        line-height: calc(16px + ((20px - (16px * 1)) / (1 * 2)));
         color: #fff;
     }
 
@@ -152,12 +156,14 @@
     }
     .main .photo-album p {
         max-width: 739px;
-        margin-top: 40px;
 
         font-weight: 400;
         font-size: 16px;
         text-align: center;
         line-height: calc(16px + (42px - (16px * 2)) / (2 * 2));
+    }
+    .main .photo-album p:first-of-type {
+        margin-top: 40px;
     }
     .main .photo-album span {
         font-weight: 700;
@@ -185,7 +191,6 @@
     }
     .main .bottom p {
         max-width: 739px;
-        height: 64px;
         font-size: 16px;
         line-height: calc(16px + (64px - (16px * 3)) / (3 * 2));
         font-weight: 400;
@@ -197,7 +202,7 @@
         background-color: #d97652;
         color: #fff;
         text-align: center;
-        padding: 15px 29px;
+        align-content: center;
         font-size: 16px;
         font-weight: 700;
         line-height: 20px;
@@ -225,48 +230,56 @@
         position: relative;
     }
     .footer .subscribe .subscribe-form {
-        width: 100%;
-        max-width: 1280px;
+        width: clamp(90%, 50vw, 1280px);
         height: 200px;
 
         display: flex;
+        justify-content: center;
         align-items: center;
         border-radius: 30px;
         background-color: #263140;
 
         position: absolute;
         top: -106px;
+        padding: 0 58px;
     }
     .footer .subscribe .subscribe-form .form-box {
         color: #fff;
-        transform: translateX(58px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     .footer .subscribe .subscribe-form .form-box h2 {
+        max-width: 466px;
         font-weight: 700;
         font-size: 36px;
+    }
+    .footer .subscribe .subscribe-form .form-box p:first-of-type {
+        margin-top: 18px;
     }
     .footer .subscribe .subscribe-form .form-box p {
         font-weight: 400;
         font-size: 14px;
-        margin-top: 18px;
+        line-height: calc(14px + ((36px - (14px * 2)) / (2 * 2)));
     }
     .footer .subscribe .subscribe-form fieldset {
-        margin-left: clamp(20px, 10vw, 80px);
         display: flex;
         align-items: center;
+        position: relative;
     }
-    .footer .subscribe .subscribe-form fieldset .email-box input {
+    .footer .subscribe .subscribe-form fieldset input {
         width: clamp(300px, 50vw, 530px);
         height: 60px;
         border-radius: 60px;
         border: none;
         padding-left: 68px;
+        margin-left: 143px;
     }
-    .footer .subscribe .subscribe-form fieldset .email-box input::placeholder {
+    .footer .subscribe .subscribe-form fieldset input::placeholder {
         font-weight: 400;
         font-size: 16px;
     }
-    .footer .subscribe .subscribe-form fieldset .email-box::before {
+    .footer .subscribe .subscribe-form fieldset::before {
         content: "";
         width: 24px;
         height: 24px;
@@ -274,7 +287,8 @@
         background-repeat: no-repeat;
         background-size: 24px 24px;
         position: absolute;
-        transform: translate(20px, 17px);
+        left: 171px;
+        top: 18px;
     }
     .footer .subscribe .subscribe-form fieldset button {
         width: 136px;
@@ -282,10 +296,11 @@
         color: #fff;
         background-color: #d97652;
         border-radius: 40px;
-        position: relative;
-        left: -141px;
         font-weight: 700;
         font-size: 16px;
+
+        position: absolute;
+        right: 5px;
     }
 
     .footer-info {
@@ -312,14 +327,12 @@
         height: 42px;
         background-color: #f29d52;
         border-radius: 50%;
-        position: relative;
+        text-align: center;
+        align-content: center;
     }
     .footer-info .logo-sns ul li a img {
         width: 24px;
         height: 24px;
-        position: relative;
-        left: 9px;
-        top: 9px;
     }
     .footer-info .footer-menu {
         display: none;
@@ -397,5 +410,10 @@
         background-image: url("../assets/images/top-hover-btn.png");
         background-position: center;
         cursor: pointer;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1400px) {
+    .main {
+        padding: 0 40px;
     }
 }
