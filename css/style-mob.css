@@ -84,7 +84,7 @@
         right: calc(-289px + 72px);
     }
     .header .header-content-box {
-        width: 264px;
+        width: clamp(200px, 100vw, 264px);
         height: 100%;
         margin-top: 40px;
 
@@ -100,7 +100,7 @@
         line-height: calc(24px + ((90px - (24px * 3)) / (3 * 2)));
     }
     .header .header-content-box p {
-        width: 280px;
+        width: clamp(200px, 100vw, 280px);
         height: 98px;
         margin-top: 30px;
         font-size: 14px;
@@ -131,7 +131,7 @@
         text-align: center;
     }
     .main .intro img {
-        width: 326px;
+        width: clamp(200px, 100vw, 326px);
         height: 190px;
         object-fit: cover;
         object-position: 0 30%;
@@ -145,13 +145,13 @@
         align-items: center;
     }
     .main .intro .intro-container h2 {
-        width: 326px;
+        width: clamp(200px, 100vw, 326px);
         font-weight: 700;
         font-size: 24px;
         line-height: calc(24px + ((90px - (24px * 3)) / (3 * 2)));
     }
     .main .intro .intro-container p {
-        width: 326px;
+        width: clamp(200px, 100vw, 326px);
         height: 36px;
         font-weight: 400;
         font-size: 14px;
@@ -168,7 +168,8 @@
         align-items: center;
     }
     .main .photo-album h2 {
-        width: 326px;
+        width: clamp(200px, 100vw, 326px);
+        /*width: 326px;*/
         font-weight: 700;
         font-size: 24px;
         text-align: center;
@@ -176,7 +177,7 @@
         line-height: calc(24px + (60px - (24px * 2)) / (2 * 2));
     }
     .main .photo-album p {
-        width: 326px;
+        width: clamp(200px, 100vw, 326px);
         font-weight: 400;
         font-size: 16px;
         text-align: center;
@@ -207,7 +208,8 @@
         box-shadow: 10px 10px 20px 0 #00000040;
     }
     .main .bottom {
-        width: 326px;
+        width: clamp(200px, 100%, 326px);
+        /*width: 326px;*/
         margin-top: 30px;
         display: flex;
         flex-direction: column;
@@ -254,7 +256,7 @@
         position: relative;
     }
     .subscribe-form {
-        width: 326px;
+        width: clamp(200px, 100%, 326px);
         background-color: #263140;
         border-radius: 18px;
         color: #fff;
@@ -279,7 +281,7 @@
         line-height: calc(14px + ((72px - (14px * 4)) / (4 * 2)));
     }
     .subscribe-form input {
-        width: 262px;
+        width: clamp(200px, 100vw, 262px);
         height: 40px;
         border-radius: 60px;
         padding-left: 48px;
@@ -303,11 +305,11 @@
         height: 40px;
         border-radius: 40px;
         margin-top: 20px;
-        margin-left: 145px;
+        margin-left: clamp(80px, 10vw, 145px);
     }
 
     .footer-info {
-        width: 390px;
+        width: clamp(200px, 100vw, 390px);
         height: 178px;
         display: flex;
         justify-content: space-between;
@@ -319,27 +321,27 @@
         gap: 58px;
     }
     .footer-info .logo-sns .logo {
-        width: 112px;
+        width: clamp(50px, 50vw, 112px);
         height: 34px;
     }
     .footer-info .logo-sns ul {
         display: flex;
-        gap: 16px;
+        gap: clamp(0px, 8vw, 16px);
     }
     .footer-info .logo-sns ul li a {
         display: inline-block;
-        width: 32px;
-        height: 32px;
+        width: clamp(5px, 10vw, 32px);
+        height: clamp(5px, 10vw, 32px);
         background-color: #f29d52;
         border-radius: 50%;
         position: relative;
     }
     .footer-info .logo-sns ul li a img {
-        width: 18.29px;
-        height: 18.29px;
+        width: clamp(3px, 10vw, 18.29px);
+        height: clamp(3px, 10vw, 18.29px);
         position: relative;
-        left: 6.86px;
-        top: 6.86px;
+        left: clamp(0px, 10vw, 6.86px);
+        top: clamp(0px, 10vw, 6.86px);
     }
     .footer-info .footer-menu {
         display: flex;
