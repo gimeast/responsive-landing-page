@@ -1,4 +1,8 @@
 @media screen and (max-width: 768px) {
+    .mob-br {
+        display: block;
+    }
+
     /*header section*/
     .header {
         width: 100%;
